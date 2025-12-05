@@ -198,26 +198,34 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods left";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
             quick-tap-ms = <100>;
 
             // global-quick-tap;
 
             bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 22 23 24 25 28 29>;
+            require-prior-idle-ms = <100>;
         };
 
         hr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods right";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
             quick-tap-ms = <100>;
 
             // global-quick-tap;
 
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <100>;
+            hold-trigger-key-positions = <1 2 3 8 9 10 11 12 18 19 20 21 26 27 0>;
+            hold-trigger-on-release;
         };
 
         dotcol: dot_colon {
