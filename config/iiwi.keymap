@@ -26,7 +26,7 @@
 
         z {
             timeout-ms = <40>;
-            key-positions = <19 18>;
+            key-positions = <8 9>;
             bindings = <&kp Z>;
             layers = <0>;
         };
@@ -253,37 +253,37 @@
 
         aptmak {
             bindings = <
-                  &kp W               &kp F           &kp P           &kp B        &kp J         &kp L                     &kp U            &kp Y
-&hl LEFT_SHIFT R  &hl LEFT_CONTROL S  &hl LEFT_ALT T  &hl LEFT_GUI H  &kp K        &kp X         &hr RIGHT_GUI N           &hr RIGHT_ALT A  &hr RIGHT_CONTROL I  &hr RIGHT_SHIFT O
-&kp Q             &kp C               &kp G           &kp D                               &kp M  &comsem          &dotcol  &trans
-                                                      &trans          &lt 1 SPACE                                          &lt 2 E   &trans
+                  &kp W               &kp F           &kp P           &kp B        &kp J    &kp L            &kp U            &kp Y
+&hl LEFT_SHIFT R  &hl LEFT_CONTROL S  &hl LEFT_ALT T  &hl LEFT_GUI H  &kp K        &kp X    &hr RIGHT_GUI N  &hr RIGHT_ALT A  &hr RIGHT_CONTROL I  &hr RIGHT_SHIFT O
+&kp Q             &kp C               &kp G           &kp D                                 &kp M            &comsem          &dotcol              &trans
+                                                      &trans          &lt 1 SPACE  &lt 2 E  &trans
             >;
         };
 
         nav {
             bindings = <
-           &kp LA(F4)     &kp LG(LEFT)     &kp LG(RIGHT)             &kp LC(W)  &kp PAGE_UP                      &kp PRINTSCREEN                          &kp UP    &kp HOME
-&kp LC(Z)  &kp LC(LS(T))  &kp LS(LC(TAB))  &kp LC(TAB)               &kp LC(A)  &kp PAGE_DOWN                    &kp LEFT                                 &kp DOWN  &kp RIGHT  &kp END
-&trans     &kp LC(X)      &kp LC(C)        &mt LS(LC(V)) LS(INSERT)                            &kp LC(LS(LEFT))  &kp LS(LC(RIGHT))  &kp LS(LC(UP_ARROW))  &trans
-                                           &trans                    &trans                                                                               &mo 2     &trans
+          &kp LA(F4)  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LC(W)  &kp PAGE_UP    &kp PRINTSCREEN   &kp UP             &kp HOME
+&kp LEFT  &kp DOWN    &kp UP        &kp RIGHT      &kp LG(Z)  &kp PAGE_DOWN  &kp LEFT          &kp DOWN           &kp RIGHT             &kp END
+&trans    &kp LG(C)   &kp LG(X)     &kp LG(V)                                &kp LC(LS(LEFT))  &kp LS(LC(RIGHT))  &kp LS(LC(UP_ARROW))  &trans
+                                    &trans         &trans     &mo 2          &trans
             >;
         };
 
         symnum {
             bindings = <
-          &kp EXCL  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp EQUAL          &kp N1          &kp N2  &kp N3
-&kp SEMI  &kp STAR  &kp UNDER    &kp MINUS  &kp PIPE    &kp N0             &kp N4          &kp N5  &kp N6  &kp COLON
+          &kp EXCL  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp EQUAL  &kp N1  &kp N2  &kp N3
+&kp SEMI  &kp STAR  &kp UNDER    &kp MINUS  &kp PIPE    &kp N0     &kp N4  &kp N5  &kp N6  &kp COLON
 &trans    &kp PLUS  &kp PERCENT  &kp AMPS                          &kp N7  &kp N8  &kp N9  &trans
-                                 &trans     &mo 1                                          &trans  &trans
+                                 &trans     &mo 1       &trans     &trans
             >;
         };
 
         fun {
             bindings = <
-         &kp F1  &kp F2  &kp F3  &kp F10  &bt BT_SEL 0             &bt BT_SEL 1              &bt BT_SEL 2  &bt BT_SEL 3
-&kp F12  &kp F4   &kp F5  &kp F6  &kp F11  &out OUT_TOG             &kp C_PP                  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE
-&trans   &kp F7   &kp F8  &kp F9                         &bootloader  &soft_off   &bt BT_CLR  &trans
-                          &trans  &trans                                                      &trans  &trans
+         &kp F1  &kp F2  &kp F3  &kp F10  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
+&kp F12  &kp F4  &kp F5  &kp F6  &kp F11  &out OUT_TOG  &kp C_PP      &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE
+&trans   &kp F7  &kp F8  &kp F9                         &bootloader   &soft_off     &bt BT_CLR    &trans
+                         &trans  &trans   &trans        &trans
             >;
         };
     };
