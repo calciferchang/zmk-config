@@ -109,7 +109,7 @@
 
         bspc {
             timeout-ms = <40>;
-            key-positions = <16 14 15>;
+            key-positions = <14 15>;
             bindings = <&kp BSPC>;
         };
 
@@ -199,7 +199,7 @@
             label = "homerow mods left";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             quick-tap-ms = <100>;
 
             // global-quick-tap;
@@ -216,7 +216,7 @@
             label = "homerow mods right";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             quick-tap-ms = <100>;
 
             // global-quick-tap;
@@ -263,7 +263,7 @@
             bindings = <
                   &kp W               &kp F           &kp P           &kp B        &kp J    &kp L            &kp U            &kp Y
 &hl LEFT_SHIFT R  &hl LEFT_CONTROL S  &hl LEFT_ALT T  &hl LEFT_GUI H  &kp K        &kp X    &hr RIGHT_GUI N  &hr RIGHT_ALT A  &hr RIGHT_CONTROL I  &hr RIGHT_SHIFT O
-&kp Q             &kp C               &kp G           &kp D                                 &kp M            &comsem          &dotcol              &trans
+&trans            &kp C               &kp G           &kp D                                 &kp M            &comsem          &dotcol              &trans
                                                       &trans          &lt 1 SPACE  &lt 2 E  &trans
             >;
         };
