@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: grassfedreeve
       url-base: https://github.com/grassfedreeve
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -19,6 +21,11 @@ manifest:
       revision: main
     - name: zmk-keyboards-iiwi
       remote: grassfedreeve
+      revision: main
+    - name: zmk-auto-layer
+      remote: urob
+    - name: zmk-helpers
+      remote: urob
       revision: main
   self:
     path: config
