@@ -29,49 +29,36 @@
   │ LB4 ╭─────╮ LH1 LH0 │ RH0 RH1 ╭─────╮ RB4 │
   ╰─────╯     ╰─────────┴─────────╯     ╰─────╯ */
 
+/* COMBOS */
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
+/* Horizontal combos - left hand */
+ZMK_COMBO(qu,    &qu,          LT2 LT1,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(v,     &kp V,        LT3 LT2,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(esc,   &kp ESC,      LT3 LT1,     APT NAV NUM LNUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+// Combos overlapping HRMs are set up as hold-taps themselves to allow for instantaneous
+// chording of mods. Custom hold-tap instances can be bootstrapped on the go using the
+// 8-argument version of ZMK_COMBO defined in base.keymap
+ZMK_COMBO(tab,   &hml LC(LGUI)TAB, LM3 LM1, APT NAV NUM LNUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(z,     &hml LS(LCTRL)Z,  LM4 LM3, APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+ZMK_COMBO(q,     &kp Q,        LB3 LB2,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(boot,  &bootloader,  LB4 LB3 LB2, APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
+
+
+/* GLOBAL DEFAULTS */
 &lt { quick-tap-ms = <200>; };
 
 &soft_off { hold-time-ms = <5000>; };
 
 / {
     combos {
-        compatible = "zmk,combos";
-
-        qu {
-            timeout-ms = <40>;
-            key-positions = <2 1>;
-            bindings = <&qu>;
-            layers = <0>;
-        };
-
-        z {
-            timeout-ms = <40>;
-            key-positions = <8 9>;
-            bindings = <&kp Z>;
-            layers = <0>;
-        };
-
-        v {
-            timeout-ms = <40>;
-            key-positions = <1 0>;
-            bindings = <&kp V>;
-            layers = <0>;
-        };
-
-        q {
-            timeout-ms = <40>;
-            key-positions = <20 19>;
-            bindings = <&kp Q>;
-            layers = <0>;
-        };
-
-        lbrc {
-            timeout-ms = <40>;
-            key-positions = <0 9>;
-            bindings = <&kp LBRC>;
-            layers = <0 2>;
-        };
-
         lbkt {
             timeout-ms = <40>;
             key-positions = <10 1>;
@@ -180,11 +167,6 @@
         softoff {
             bindings = <&soft_off>;
             key-positions = <21 22 23>;
-        };
-
-        boot {
-            bindings = <&bootloader>;
-            key-positions = <20 19 18>;
         };
 
         lshift {
