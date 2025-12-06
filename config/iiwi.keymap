@@ -14,7 +14,14 @@
 #include "zmk-helpers/helper.h"
 #include "iiwi.h"
 
-/*     I'IWI KEY MATRIX / LAYOUT MAPPING
+/* LAYER MAPPING */
+#define APT   0
+#define NAV   1
+#define NUM   2
+#define FN    3
+#define LNUM  4
+
+/* I'IWI KEY MATRIX / LAYOUT MAPPING
       ╭─────────────────┬─────────────────╮
       │ LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 │
   ╭───╯ LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 ╰───╮
