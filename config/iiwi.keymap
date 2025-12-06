@@ -12,7 +12,6 @@
 #include <behaviors/num_word.dtsi>
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/hummingbird.h"
 
 /* HUMMINGBIRD KEY MATRIX / LAYOUT MAPPING
 
@@ -33,8 +32,6 @@
 &lt { quick-tap-ms = <200>; };
 
 &soft_off { hold-time-ms = <5000>; };
-
-ZMK_COMBO(cut,   &kp LC(X), LM3 LM4, ALL, 25 )
 
 / {
     combos {
