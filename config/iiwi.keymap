@@ -36,30 +36,47 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
+/* Crossbody combos */
+ZMK_COMBO(capslock, &kp caps_lock, LT3 RT3, APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(capsword, &caps_word,LM1 RM1,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(bslash, &kp BSLSH,   LB1 RB1,     APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(softoff, &soft_off,  LB1 RB1 RB2, APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 /* Horizontal combos - left hand */
 ZMK_COMBO(qu,    &qu,          LT2 LT1,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(v,     &kp V,        LT3 LT2,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(esc,   &kp ESC,      LT3 LT1,     APT NAV NUM LNUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Combos overlapping HRMs are set up as hold-taps themselves to allow for instantaneous
-// chording of mods. Custom hold-tap instances can be bootstrapped on the go using the
-// 8-argument version of ZMK_COMBO defined in base.keymap
+// chording of mods.
 ZMK_COMBO(tab,   &hl LC(LGUI)TAB,  LM3 LM1, APT NAV NUM LNUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(z,     &hl LS(LCTRL)Z,   LM4 LM3, APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(lshift,&sk LSHIFT,   LM3 LM2,     APT     NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(q,     &kp Q,        LB3 LB2,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(boot,  &bootloader,  LB4 LB3 LB2, APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-/* Vertical Combos - left hand */
-ZMK_COMBO(lbkt,  &kp LBKT,     LT3 LM3,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(lbrc,  &kp LBRC,     LT2 LM2,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(lpar,  &kp LPAR,     LT1 LM1,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(lt,    &kp LT,       LT0 LM0,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+/* Vertical combos - left hand */
+ZMK_COMBO(lbkt,  &kp LBKT,     LT3 LM3,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lbrc,  &kp LBRC,     LT2 LM2,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lpar,  &kp LPAR,     LT1 LM1,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lt,    &kp LT,       LT0 LM0,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(rbkt,  &kp RBKT,     RT3 RM3,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(rbrc,  &kp RBRC,     RT2 RM2,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(rpar,  &kp RPAR,     RT1 RM1,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(gt,    &kp GT,       RT0 RM0,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+/* Horizontal combos - right hand */
+ZMK_COMBO(apos,  &kp APOS,     RT3 RT2,     APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(grave, &kp GRAVE,    RT2 RT1,     APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+ZMK_COMBO(enter, &hr RC(RGUI)ENTER,RM3 RM1, APT NAV NUM LNUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(bspc,  &hr RA(RGUI)BSPC, RM2 RM1, APT NAV NUM LNUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(rshift,&sk RSHIFT,   RM3 RM2,     APT     NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+ZMK_COMBO(fslash,&kp SLASH,    RB2 RB1,     APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+/* Vertical combos - right hand */
+ZMK_COMBO(rbkt,  &kp RBKT,     RT3 RM3,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(rbrc,  &kp RBRC,     RT2 RM2,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(rpar,  &kp RPAR,     RT1 RM1,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(gt,    &kp GT,       RT0 RM0,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 
 /* GLOBAL DEFAULTS */
@@ -68,143 +85,6 @@ ZMK_COMBO(gt,    &kp GT,       RT0 RM0,     APT NAV NUM, COMBO_TERM_SLOW, COMBO_
 &soft_off { hold-time-ms = <5000>; };
 
 / {
-    combos {
-        lbkt {
-            timeout-ms = <40>;
-            key-positions = <10 1>;
-            bindings = <&kp LBKT>;
-            layers = <0 2>;
-        };
-
-        lpar {
-            timeout-ms = <40>;
-            key-positions = <2 11>;
-            bindings = <&kp LPAR>;
-            layers = <0 2>;
-        };
-
-        lt {
-            timeout-ms = <40>;
-            key-positions = <3 12>;
-            bindings = <&kp LT>;
-            layers = <0 2>;
-        };
-
-        rbrc {
-            timeout-ms = <40>;
-            key-positions = <7 16>;
-            bindings = <&kp RBRC>;
-            layers = <0 2>;
-        };
-
-        rbkt {
-            timeout-ms = <40>;
-            key-positions = <6 15>;
-            bindings = <&kp RBKT>;
-            layers = <0 2>;
-        };
-
-        rpar {
-            timeout-ms = <40>;
-            key-positions = <5 14>;
-            bindings = <&kp RPAR>;
-            layers = <0 2>;
-        };
-
-        gt {
-            timeout-ms = <40>;
-            key-positions = <4 13>;
-            bindings = <&kp GT>;
-            layers = <0 2>;
-        };
-
-        capsword {
-            timeout-ms = <40>;
-            key-positions = <14 11>;
-            bindings = <&caps_word>;
-        };
-
-        bspc {
-            timeout-ms = <40>;
-            key-positions = <14 15>;
-            bindings = <&kp BSPC>;
-        };
-
-        del {
-            timeout-ms = <40>;
-            key-positions = <11 10 9>;
-            bindings = <&kp DEL>;
-        };
-
-        fwslash {
-            bindings = <&kp SLASH>;
-            key-positions = <22 23>;
-            timeout-ms = <40>;
-            layers = <0>;
-        };
-
-        bkslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <22 21>;
-            timeout-ms = <40>;
-            layers = <0>;
-        };
-
-        apos {
-            bindings = <&kp APOS>;
-            key-positions = <6 7>;
-            timeout-ms = <40>;
-            layers = <0>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <6 5>;
-            timeout-ms = <40>;
-            layers = <0>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <14 16>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <9 11>;
-        };
-
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <21 22 23>;
-        };
-
-        lshift {
-            bindings = <&sk LEFT_SHIFT>;
-            key-positions = <10 9>;
-        };
-
-        rshift {
-            bindings = <&sk RIGHT_SHIFT>;
-            key-positions = <15 16>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 2>;
-        };
-
-        delword {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <5 7>;
-        };
-
-        caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <7 0>;
-        };
-    };
-
     behaviors {
         hl: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
