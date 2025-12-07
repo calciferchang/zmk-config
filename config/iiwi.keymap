@@ -39,7 +39,7 @@
 /* Crossbody combos */
 ZMK_COMBO(capslock, &kp CAPSLOCK,  LT3 RT3, APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(capsword, &caps_word,LM1 RM1,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(bslash, &kp BSLSH,   LB1 RB1,     APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(bslash, &kp BSLH,    LB1 RB1,     APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(softoff, &soft_off,  LB1 RB1 RB2, APT NAV NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
