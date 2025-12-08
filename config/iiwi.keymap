@@ -55,7 +55,7 @@ ZMK_COMBO(lshift,&sk LSHIFT,   LM3 LM2,     APT     NUM     , COMBO_TERM_FAST, C
 
 ZMK_COMBO(q,     &kp Q,        LB3 LB2,     APT             , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(boot,  &bootloader,  LB4 LB3 LB2, APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(numword,&num_word 4,   LM4 LH0,     APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(numword,&num_word 4, LM4 LH0,     APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(lbkt,  &kp LBKT,     LT3 LM3,     APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -92,7 +92,7 @@ ZMK_COMBO(gt,    &kp GT,       RT0 RM0,     APT NAV NUM     , COMBO_TERM_SLOW, C
             label = "homerow mods left";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <190>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <100>;
 
             // global-quick-tap;
@@ -109,7 +109,7 @@ ZMK_COMBO(gt,    &kp GT,       RT0 RM0,     APT NAV NUM     , COMBO_TERM_SLOW, C
             label = "homerow mods right";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <190>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <100>;
 
             // global-quick-tap;
