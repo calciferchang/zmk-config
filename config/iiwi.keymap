@@ -14,13 +14,6 @@
 #include "zmk-helpers/helper.h"
 #include "iiwi.h"
 
-/* LAYER MAPPING */
-#define APT   0
-#define NAV   1
-#define NUM   2
-#define FN    3
-#define LNUM  4
-
 #define XXX &none
 #define ___ &trans
 
