@@ -93,8 +93,8 @@ ZMK_ADAPTIVE_KEY(
                 bindings = <BINDING1>, <BINDING2>;)
 
 // Tap: comma | Shift + tap: semicolon
-SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &KP SEMICOLON)
-SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &KP COLON)
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &kp SEMICOLON)
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &kp COLON)
 
 ZMK_LAYER(base,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
