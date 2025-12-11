@@ -18,11 +18,24 @@
 #define ___ &trans
 
 /* GLOBAL DEFAULTS */
-&lt { quick-tap-ms = <200>; };
+#define QUICK_TAP_MS 175
 
 &soft_off { hold-time-ms = <5000>; };
 
-#define QUICK_TAP_MS 175
+&sk {
+  release-after-ms = <900>;
+  quick-release;
+};
+
+&sl { // Allow sticky mods to chord across sticky layers.
+  ignore-modifiers;
+};
+
+&lt {
+  flavor = "balanced";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
 
 /* Homerow mods */
 #define KEYS_L LT0 LT1 LT2 LT3 LM0 LM1 LM2 LM3 LM4 LB1 LB2 LB3 LB4
