@@ -28,7 +28,7 @@ ZMK_COMBO(capsword, &caps_word,LM1 RM1,         APT             , COMBO_TERM_SLO
 // // chording of mods.
 // ZMK_COMBO(tab,   &hl LC(LGUI)TAB,  LM3 LM1,     APT NAV NUM LNUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // ZMK_COMBO(z,     &hl LS(LCTRL)Z,   LM4 LM3,     APT             , COMBO_TERM_SLOW, COMBO_IDLE_FAST)
-// ZMK_COMBO(mshift,&magic_shift,   LM3 LM2,         APT     NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// ZMK_COMBO(mshift,MAGIC_SHIFT,   LM3 LM2,         APT     NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // ZMK_COMBO(q,     &kp Q,        LB3 LB2,         APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // ZMK_COMBO(boot,  &bootloader,  LB4 LB3 LB2,     APT             , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -46,7 +46,7 @@ ZMK_COMBO(capsword, &caps_word,LM1 RM1,         APT             , COMBO_TERM_SLO
 
 // ZMK_COMBO(enter, &hr RC(RGUI)ENTER,RM3 RM1,     APT NAV NUM LNUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // ZMK_COMBO(bspc,  &hr RA(RGUI)BSPC, RM3 RM2 RM1, APT NAV NUM LNUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-// ZMK_COMBO(mshift,&magic_shift,   RM3 RM2,         APT     NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// ZMK_COMBO(mshift,MAGIC_SHIFT,   RM3 RM2,         APT     NUM     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // ZMK_COMBO(fslash,&kp SLASH,    RB2 RB1,         APT NAV NUM     , COMBO_TERM_SLOW, COMBO_IDLE_FAST)
 
