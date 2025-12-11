@@ -63,13 +63,46 @@ MAKE_HRM(hr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 #include "combos.dtsi" // Must be sourced after HRM-combo hack.
 
+/* Magic-shift & auto-layers */
+
+// Tap: repeat after alpha, else sticky-shift |
+// Shift + tap/ double-tap: caps-word | Hold: shift.
+#define MAGIC_SHIFT &magic_shift LSHFT 0
+ZMK_HOLD_TAP(magic_shift, bindings = <&kp>, <&magic_shift_tap>;
+             flavor = "balanced"; tapping-term-ms = <200>;
+             quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_MOD_MORPH(magic_shift_tap, bindings = <&shift_repeat>, <&caps_word>;
+              mods = <(MOD_LSFT)>;)
+ZMK_ADAPTIVE_KEY(
+    shift_repeat, bindings = <&sk LSHFT>;
+    repeat {
+      trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+      bindings = <&key_repeat>;
+      max-prior-idle-ms = <1200>;
+      strict-modifiers;
+    };)
+&caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
+  /delete-property/ ignore-modifiers;
+};
+
+/* Custom behaviors */
+
+// Define mod-morph with a *single* mod trigger for less repetition.
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
+  ZMK_MOD_MORPH(NAME, mods = <(MOD_L##MOD | MOD_R##MOD)>;                      \
+                bindings = <BINDING1>, <BINDING2>;)
+
+// Tap: comma | Shift + tap: semicolon
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &KP SEMICOLON)
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &KP COLON)
+
 ZMK_LAYER(base,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
                         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y
      // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
           &hl LGUI R    &hl LALT S    &hl LCTRL T   &hl LSHFT H   &kp K             &kp X         &hr RSHFT N   &hr LCTRL A   &hr LALT I    &hr LGUI O
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯   ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          XXX           &kp C         &kp G         &kp D                                         &kp M         &kp COMMA     &kp DOT       XXX
+          XXX           &kp C         &kp G         &kp D                                         &kp M         &comma_morph  &dot_morph    XXX
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮   ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
                                                     XXX           &kp TAB           &kp RET       XXX
      //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
