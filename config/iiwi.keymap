@@ -94,7 +94,7 @@ ZMK_CONDITIONAL_LAYER(function, NROW NAV, FUN)
 
 // Alt+Tab swapper, requires tri-state module.
 ZMK_TRI_STATE(swapper, bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-              ignored-key-positions = <LT2 RT2 RM1 RM2 RM3>;)
+              ignored-key-positions = <LT2 LM1 LM2 LM3 LM4>;)
 
 // Define mod-morph with a *single* mod trigger for less repetition.
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
@@ -154,7 +154,7 @@ ZMK_LAYER(numpad,
 )
 ZMK_LAYER(nav,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
-                        ___           ___           &swapper      ___               ___           ___           ___           ___
+                        &kp RET       &kp LS(TAB)   &swapper      ___               ___           ___           ___           ___
      // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     ___               ___           &sk RSHIFT    &sk RCTRL     &sk RALT      &sk RGUI
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯   ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
