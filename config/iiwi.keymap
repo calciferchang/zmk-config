@@ -90,6 +90,7 @@ ZMK_ADAPTIVE_KEY(
 };
 
 /* Custom behaviors */
+ZMK_CONDITIONAL_LAYER(function, NROW NAV, FUN)
 
 // Alt+Tab swapper, requires tri-state module.
 ZMK_TRI_STATE(swapper, bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
