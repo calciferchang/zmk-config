@@ -114,7 +114,6 @@ SIMPLE_MORPH(bksp_del, SFT, &kp BACKSPACE, &kp DELETE)
 
 /* Macros */
 ZMK_MACRO(qu,
-  #binding-cells = <0>;
   bindings = <&kp Q &kp U>;
 )
 
