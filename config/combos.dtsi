@@ -29,17 +29,17 @@ ZMK_COMBO(tab,   &hl LC(LGUI)TAB,  LM3 LM1,     APT NROW NPAD NAV     , COMBO_TE
 ZMK_COMBO(z,     &hl LS(LCTRL)Z,   LM4 LM3,     APT                   , COMBO_TERM_SLOW, COMBO_IDLE_FAST)
 ZMK_COMBO(mshift,&magic_shift RSHIFT 0, LM3 LM2,APT NROW      NAV     , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(q,     &kp Q,        LB3 LB2,         APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(npad,  &num_word 2,  LB2 LB1,         APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(boot,  &bootloader,  LB4 LB3 LB2,     APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(undo,  &kp LG(Z),    LB3 LB2,                       NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(redo,  &kp LS(LG(Z)),LB2 LB1,                       NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(q,     &kp Q,            LB3 LB2,     APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(npad,  &num_word NPAD,   LB2 LB1,     APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(boot,  &bootloader,      LB4 LB3 LB2, APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(undo,  &kp LG(Z),        LB3 LB2,                   NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(redo,  &kp LS(LG(Z)),    LB2 LB1,                   NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(nrow,  &mo NROW,     LH1 LH0,         APT                   , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(nrow,  &mo NROW,         LH1 LH0,     APT                   , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Vertical combos - left hand */
-ZMK_COMBO(lbkt,  &kp LBKT,     LT2 LM2,         APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(lpar,  &lpar_morph,  LT1 LM1,         APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lbkt,  &kp LBKT,         LT2 LM2,     APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lpar,  &lpar_morph,      LT1 LM1,     APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(apos,  &kp APOS,     RT3 RT2,         APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_FAST)
