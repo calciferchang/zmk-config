@@ -102,7 +102,15 @@ ZMK_TRI_STATE(swapper, bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
 
 // Tap: comma | Shift + tap: semicolon
 SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &kp SEMICOLON)
+// Tap: period | Shift + tap: colon
 SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &kp COLON)
+
+// Tap: parentheses | Shift + tap: angle bracket
+SIMPLE_MORPH(lpar_morph, SFT, &kp LPAR, &kp LT)
+SIMPLE_MORPH(rpar_morph, SFT, &kp RPAR, &kp GT)
+
+// Tap: backspace | Shift + tap: delete
+SIMPLE_MORPH(bksp_del, SFT, &kp BACKSPACE, &kp DELETE)
 
 ZMK_LAYER(base,
      //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
