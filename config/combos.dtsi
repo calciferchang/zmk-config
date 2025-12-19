@@ -32,7 +32,7 @@ ZMK_COMBO(mshift,&magic_shift LSHIFT 0,  LM3 LM2,     APT NROW              , CO
 ZMK_COMBO(q,     &kp Q,        LB3 LB2,         APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(npad   &num_word 2   LB2 LB1,         APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(boot,  &bootloader,  LB4 LB3 LB2,     APT                   , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(nrow,  &mo NROW,     LH1 LH0          APT                   , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(nrow,  &mo NROW,     LH1 LH0,         APT                   , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(lbkt,  &kp LBKT,     LT2 LM2,         APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
