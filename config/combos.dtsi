@@ -44,8 +44,8 @@ ZMK_COMBO(lbkt,  &kp LBKT,         LT2 LM2,     APT NROW      NAV     , COMBO_TE
 ZMK_COMBO(lpar,  &lpar_morph,      LT1 LM1,     APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(apos,  &kp APOS,     RT3 RT2,         APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_FAST)
-ZMK_COMBO(grave, &kp GRAVE,    RT2 RT1,         APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(apos,  &kp APOS,         RT3 RT2,     APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+ZMK_COMBO(grave, &kp GRAVE,        RT2 RT1,     APT NROW      NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(enter, &hr RC(RGUI)ENTER,RM3 RM1,     APT NROW NPAD NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(bspc,  &bksp_del, RM3 RM2 RM1,        APT NROW NPAD NAV     , COMBO_TERM_SLOW, COMBO_IDLE_SLOW, LS(LC(LALT)), KEYS_L)
