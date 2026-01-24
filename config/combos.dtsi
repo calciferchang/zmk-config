@@ -45,7 +45,7 @@ ZMK_COMBO(equal,        &kp EQUAL,             RT3 RT2,     APT     NUM         
 ZMK_COMBO(minus,        &kp MINUS,             RT2 RT1,     APT     NUM          , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(capslock_r,   &kp CAPSLOCK,          RT3 RT2 RT1, APT                  , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(bt_clr,       &vb_bt_clr,            RT3 RT2 RT1,             FUN      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bt_clr,       &bt_clr,               RT3 RT2 RT1,             FUN      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(enter_r,      &hr RC(RGUI) ENTER,    RM3 RM1,     APT NAV NUM          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(apos,         &hr RC(RALT) APOS,     RM3 RM2,     APT                  , COMBO_TERM_FAST, COMBO_IDLE_FAST)
