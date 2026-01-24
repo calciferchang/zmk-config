@@ -6,6 +6,13 @@
   │ LB4 ╭─────╮ LH1 LH0 │ RH0 RH1 ╭─────╮ RB4 │
   ╰─────╯     ╰─────────┴─────────╯     ╰─────╯ */
 
+  /* COMBOS */
+  #define COMBO_TERM_FAST 24
+  #define COMBO_TERM_SLOW 40
+
+  #define COMBO_IDLE_FAST 150
+  #define COMBO_IDLE_SLOW 50
+
 
   /* Horizontal combos - left hand */
   ZMK_COMBO(esc_l,        &kp ESC,               LT3 LT2,     APT NAV NUM           , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
